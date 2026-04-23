@@ -2,10 +2,10 @@ import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # ВСТАВЬ СЮДА ТОКЕН ОТ BOTFATHER
-BOT_TOKEN = "8735556282:AAEhafSbAbG17tKjDOBHjsVokPlh7wc5pws"
+import os
 
-# ВСТАВЬ СЮДА СВОЙ TELEGRAM ID ЧИСЛОМ
-ADMIN_ID = 554318427
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
 
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode="HTML")
 
